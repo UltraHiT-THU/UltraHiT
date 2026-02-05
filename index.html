@@ -32,12 +32,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title">
+          <h1 class="title is-3 publication-title" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
             UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography
           </h1>
           <div class="is-size-4"><b style="color: #e74c3c;">Accepted to ICRA 2026</b></div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors" style="font-weight: bold;">
             <span class="author-block">Teng Wang<sup>1,*</sup>,</span>
             <span class="author-block">Haojun Jiang<sup>1,*,&sect;</sup>,</span>
             <span class="author-block">Yuxuan Wang<sup>2,*</sup>,</span>
@@ -53,7 +53,7 @@
             <span class="author-block"><sup>3</sup>Beijing Academy of Artificial Intelligence, Beijing, China.</span>
           </div>
 
-          <div class="is-size-6 publication-authors">
+          <div class="is-size-6 publication-authors" style="font-weight: bold;">
             <sup>*</sup>These authors contributed equally to this work.
           </div>
           <div class="is-size-6 publication-authors">
@@ -66,7 +66,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="../2509.13832v2.pdf"
+                <a href="https://arxiv.org/pdf/2509.13832"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,17 +129,65 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="content">
-        <p>
-          This website is licensed under a <a rel="license"
-                                              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-          Commons Attribution-ShareAlike 4.0 International License</a>.
-        </p>
-        <p>
-          It borrows the source code of <a
-            href="https://nerfies.github.io/">this website</a>,
-            We sincerely thank <a
-            href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
-        </p>
+        <div style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h3 class="title is-5" style="margin-bottom: 0;">BibTeX</h3>
+            <button id="copyBibtexBtn" class="button is-small" style="background-color: #667eea; color: white; border: none;">
+              <span class="icon">
+                <i class="fas fa-copy"></i>
+              </span>
+              <span>Copy</span>
+            </button>
+          </div>
+          <pre id="bibtexCode" style="background-color: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; position: relative;"><code>@misc{wang2025ultrahithierarchicaltransformerarchitecture,
+      title={UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography}, 
+      author={Teng Wang and Haojun Jiang and Yuxuan Wang and Zhenguo Sun and Xiangjie Yan and Xiang Li and Gao Huang},
+      year={2025},
+      eprint={2509.13832},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2509.13832}, 
+}</code></pre>
+        </div>
+        <script>
+          document.getElementById('copyBibtexBtn').addEventListener('click', function() {
+            const bibtexText = `@misc{wang2025ultrahithierarchicaltransformerarchitecture,
+      title={UltraHiT: A Hierarchical Transformer Architecture for Generalizable Internal Carotid Artery Robotic Ultrasonography}, 
+      author={Teng Wang and Haojun Jiang and Yuxuan Wang and Zhenguo Sun and Xiangjie Yan and Xiang Li and Gao Huang},
+      year={2025},
+      eprint={2509.13832},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2509.13832}, 
+}`;
+            navigator.clipboard.writeText(bibtexText).then(function() {
+              const btn = document.getElementById('copyBibtexBtn');
+              const originalHTML = btn.innerHTML;
+              btn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+              btn.style.backgroundColor = '#00b894';
+              setTimeout(function() {
+                btn.innerHTML = originalHTML;
+                btn.style.backgroundColor = '#667eea';
+              }, 2000);
+            }).catch(function(err) {
+              console.error('Failed to copy: ', err);
+              alert('Failed to copy BibTeX. Please select and copy manually.');
+            });
+          });
+        </script>
+        <div style="margin-top: 2rem;">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            It borrows the source code of <a
+              href="https://nerfies.github.io/">this website</a>,
+              We sincerely thank <a
+              href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
       </div>
     </div>
   </div>
