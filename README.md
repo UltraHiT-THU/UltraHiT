@@ -73,6 +73,8 @@ If you find this work useful in your research, please cite:
 
 Visit our project website: [https://ultrahit-thu.github.io/UltraHiT/](https://ultrahit-thu.github.io/UltraHiT/)
 
+This website is deployed and maintained by [Yuxuan Wang](https://github.com/yxwang1215).
+
 ## 📄 License
 
 This website is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
